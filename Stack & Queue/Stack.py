@@ -7,13 +7,17 @@ class Stack:
         self.stack.append(data)
     
     def pop(self):
-        return self.stack.pop()
+        if not self.isEmpty():
+            return self.stack.pop()
+        return None
     
     def isEmpty(self):
-        return self.stack.length == 0
+        return len(self.stack) == 0
     
     def peek(self):
-        return self.stack[-1]
+        if not self.isEmpty():
+            return self.stack[-1]
+        return None
     
     def print(self):
         for item in self.stack:
@@ -25,4 +29,5 @@ if(__name__ == "__main__"):
     stack.push(2)
     stack.push(3)
     stack.print()
+    print(stack.peek())
     print(stack.pop())

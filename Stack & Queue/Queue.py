@@ -4,16 +4,20 @@ class Queue:
         self.queue = []
     
     def enqueue(self, data):
-        self.queue.append(data)
+        self.queue.insert(0, data)
     
     def dequeue(self):
-        return self.queue.pop(0)
+        if not self.isEmpty():
+            return self.queue.pop(0)
+        return None
     
     def isEmpty(self):
-        return self.queue.length == 0
+        return len(self.queue) == 0
     
     def peek(self):
-        return self.queue[0]
+        if not self.isEmpty():
+            return self.queue[0]
+        return None
     
     def print(self):
         for item in self.queue:
