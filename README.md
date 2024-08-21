@@ -41,7 +41,7 @@
 - Last In First Out (LIFO)
 - Can be implemented using an array
 
-## [Binary Search](/Binary Search/BinarySearch.py)
+## [Binary Search](https://github.com/ricklan/data-structure/blob/main/Binary%20Search/BinarySearch.py)
 
 - Input needs to be sorted.
 - (Assuming the input is sorted in non-decreasing order). Have a left pointer at the start, and a right pointer at the end, and get the middle element. If the middle element is the target, return it. If the middle element is less than the target, move the left pointer to be its next element. Otherwise, move the right pointer to be its previous element.
