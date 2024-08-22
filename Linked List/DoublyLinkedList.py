@@ -1,56 +1,30 @@
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-        self.prev = None
+from Node import Node
 
 class DLL:
     def __init__(self):
         self.head = None
     
-    def insertAtBeginning(self, data):
-        node = Node(data)
-        if(self.head == None):
+    def insert(self, data):
+        node = Node(val=data)
+        if(self.head is None):
             self.head = node
             self.head.next = None
             self.head.prev = None
         else:
-            temp = self.head
-            node.next = temp
-            node.prev = None
-            temp.prev = node
-            self.head = node
-    
-    def insertAtEnd(self, data):
-        node = Node(data)
-        if(self.head == None):
-            self.head = node
-            self.head.next = self.head
-            self.head.prev = None
-        else:
-            temp = self.head
-            while(temp.next is not None):
-                temp = temp.next
-            temp.next = node
-            node.next = None
-            node.prev = temp
-    
-    def deleteBeginning(self):
-        temp = self.head.next
-        temp.prev = None
-        self.head = temp
-
-    def deleteEnd(self):
-        cur = self.head
-        while(cur.next is not None):
-            cur = cur.next
-        cur.prev.next = None
+            cur = self.head
+            while cur.next:
+                cur = cur.next
+            cur.next = node
+            node.prev = cur
     
     def printLinkedList(self):
+        string = "None"
         cur = self.head
         while(cur is not None):
-            print(cur.data)
+            string += f" <-- {cur.data} --> "
             cur = cur.next
+        string += "None"
+        print(string)
     
     def reverseLinkedList(self):
         prev = None
@@ -67,21 +41,13 @@ class DLL:
 
 if(__name__ == '__main__'):
     dll = DLL()
-    dll.insertAtBeginning(1)
-    dll.insertAtBeginning(2)
-    dll.insertAtBeginning(3)
+    dll.insert(1)
+    dll.insert(2)
+    dll.insert(3)
+    dll.insert(5)
+    dll.insert(8)
+    dll.insert(9)
     dll.printLinkedList()
-    print("")
-    dll.insertAtEnd(5)
-    dll.insertAtEnd(8)
-    dll.insertAtEnd(9)
-    dll.printLinkedList()
-    print("")
+    print()
     dll.reverseLinkedList()
-    dll.printLinkedList()
-    print("")
-    dll.deleteBeginning()
-    dll.printLinkedList()
-    print("")
-    dll.deleteEnd()
     dll.printLinkedList()

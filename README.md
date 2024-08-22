@@ -8,7 +8,7 @@
 
 **Sliding Window**
 
-## Linked List
+## [Linked List](https://github.com/ricklan/data-structure/tree/main/Linked%20List)
 
 - The **head** of the linked list is the first node.
 - The **tail** of the linked list is the last node.
@@ -31,12 +31,12 @@
 - Each node has a pointer to the next node.
 - The tail points to `head`.
 
-## Queue
+## [Queue](https://github.com/ricklan/data-structure/blob/main/Stack%20%26%20Queue/Queue.py)
 
 - First In First Out (FIFO)
 - Can be implemented using an array
 
-## Stack
+## [Stack](https://github.com/ricklan/data-structure/blob/main/Stack%20%26%20Queue/Stack.py)
 
 - Last In First Out (LIFO)
 - Can be implemented using an array

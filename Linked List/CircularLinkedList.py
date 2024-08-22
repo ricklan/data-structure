@@ -1,61 +1,30 @@
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
+from Node import Node
 
 class CLL:
     def __init__(self):
         self.head = None
-        self.tail = None
 
     
-    def insertAtBeginning(self, data):
+    def insert(self, data):
         node = Node(data)
         if(self.head == None):
             self.head = node
             self.head.next = self.head
-            self.tail = self.head
         else:
-            temp = self.head
-            node.next = temp
-            self.head = node
-            self.tail.next = self.head
-    
-    def insertAtEnd(self, data):
-        node = Node(data)
-        if(self.head == None):
-            self.head = node
-            self.head.next = self.head
-            self.tail.next = self.head
-        else:
-            temp = self.head
-            while(temp.next is not self.head):
-                temp = temp.next
-            temp.next = node
+            cur = self.head
+            while cur.next is not self.head:
+                cur = cur.next
+            cur.next = node
             node.next = self.head
-            self.tail = node
-    
-    def deleteBeginning(self):
-        temp = self.head.next
-        self.head = temp
-        self.tail.next = self.head
-
-    def deleteEnd(self):
-        prev = None
-        cur = self.head
-        while(cur.next is not self.head):
-            prev = cur
-            cur = cur.next
-        self.tail = prev
-        prev.next = self.head
     
     def printLinkedList(self):
+        string = "<-- "
         cur = self.head
         while(cur.next is not self.head):
-            print(cur.data)
+            string += f"{cur.data} --> "
             cur = cur.next
-        print(cur.data)
-        print(cur.next.data)
+        string += f"{cur.data} --> "
+        print(string)
     
     def reverseLinkedList(self):
         prev = None
@@ -76,21 +45,13 @@ class CLL:
 
 if(__name__ == '__main__'):
     cll = CLL()
-    cll.insertAtBeginning(1)
-    cll.insertAtBeginning(2)
-    cll.insertAtBeginning(3)
+    cll.insert(1)
+    cll.insert(2)
+    cll.insert(3)
+    cll.insert(5)
+    cll.insert(8)
+    cll.insert(9)
     cll.printLinkedList()
-    print("")
-    cll.insertAtEnd(5)
-    cll.insertAtEnd(8)
-    cll.insertAtEnd(9)
-    cll.printLinkedList()
-    print("")
+    print()
     cll.reverseLinkedList()
-    cll.printLinkedList()
-    print("")
-    cll.deleteBeginning()
-    cll.printLinkedList()
-    print("")
-    cll.deleteEnd()
     cll.printLinkedList()
