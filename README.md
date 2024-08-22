@@ -49,16 +49,40 @@
 
 ## Graph
 
+- A `node/vertex` represents an element on a graph.
+- An `edge` connects 2 nodes.
+- A `directed graph` is a graph where edges have a direction.
+  E.g. (Node A)-->(Node B)
+- An `undirected graph` is a graph where edges do not have a direction.
+  E.g. (Node A)---(Node B)
+- Two vertices are `adjacent` if they are connected directly by an edge.
+- An `adjacency list` is a data structure showing all the nodes that are connected with each node.
+- A `path` is a sequence of vertices connected by edges.
+- A `simple path` has no repeated vertices.
+- A `cycle` is a path that starts and ends at the same vertex.
+
+[**Breadth First Search (BFS)**]
+
+- Explores the graph level by level, starting from a given node.
+- Useful for finding the shortest path in unweighted graphs.
+- Implemented using a queue.
+
+[**Depth First Search (DFS)**]
+
+- Explores as far as possible along a branch before backtracking.
+- Can be implemented recursively or iteratively using a stack.
+- Useful for pathfinding and detecting cycles.
+
 ## [Tree](https://github.com/ricklan/data-structure/tree/main/Trees)
 
 - Every tree is a graph.
 - Trees are graphs where there are no cycles.
-- The root is the first node of the tree.
-- The node which is a predecessor of any node is the parent node.
-- The node which is descendant of any node is the child node.
-- A leaf is a node that doesn't have any children.
-- Edges connect 2 nodes to each other.
-- A path is the sequence of nodes and edges from 1 node to another.
+- The `root` is the first node of the tree.
+- The node which is a predecessor of any node is the `parent node`.
+- The node which is descendant of any node is the `child node`.
+- A `leaf` is a node that doesn't have any children.
+- `Edges` connect 2 nodes to each other.
+- A `path` is the sequence of nodes and edges from 1 node to another.
 
 **Binary Tree**
 
@@ -71,10 +95,10 @@
 **Trie**
 
 - A trie is a type of tree data structure that is used to store a dynamic set or associative array where the keys are usually strings. It is also known as a "prefix tree" because it is used to efficiently store and retrieve keys that share common prefixes.
-- Nodes: Each node in a trie represents a single character of a key. The root node is usually empty and does not contain any character.
-- Edges: An edge connects two nodes and represents the transition from one character to the next in a key.
-- Paths: A path from the root to a node spells out a prefix of some key.
-- End of Word Marker: Nodes can have a flag (or marker) to indicate the end of a valid word or key.
+- Each node in a trie represents a single character of a key. The root node is usually empty and does not contain any character.
+- An edge connects two nodes and represents the transition from one character to the next in a key.
+- A path from the root to a node spells out a prefix of some key.
+- Nodes can have a flag (or marker) to indicate the end of a valid word or key.
 
 [**Inorder Traversal**](https://github.com/ricklan/data-structure/blob/main/Trees/inorder_traversal.py)
 
@@ -112,3 +136,14 @@
 ## Dynamic Programming
 
 ## Sorting Algorithms
+
+## Greedy Algorithm
+
+## Matrix
+
+- Depending on the question, a matrix might be a graph.
+- May need to have an array of directions (E.g. `[(-1,0), (1,0), (0,1), (0,-1)]` representing `[left, right, up, down]`).
+- `num_rows = len(graph)`
+- `num_columns = len(graph[0])`
+
+## Intervals
