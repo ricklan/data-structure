@@ -47,7 +47,7 @@
 - (Assuming the input is sorted in non-decreasing order). Have a left pointer at the start, and a right pointer at the end, and get the middle element. If the middle element is the target, return it. If the middle element is less than the target, move the left pointer to be its next element. Otherwise, move the right pointer to be its previous element.
 - Time Complexity: O(log(n))
 
-## Graph
+## [Graph](https://github.com/ricklan/data-structure/tree/main/Graph)
 
 - A `node/vertex` represents an element on a graph.
 - An `edge` connects 2 nodes.
@@ -61,13 +61,13 @@
 - A `simple path` has no repeated vertices.
 - A `cycle` is a path that starts and ends at the same vertex.
 
-[**Breadth First Search (BFS)**]
+[**Breadth First Search (BFS)**](https://github.com/ricklan/data-structure/blob/main/Graph/bfs.py)
 
 - Explores the graph level by level, starting from a given node.
 - Useful for finding the shortest path in unweighted graphs.
 - Implemented using a queue.
 
-[**Depth First Search (DFS)**]
+[**Depth First Search (DFS)**](https://github.com/ricklan/data-structure/blob/main/Graph/dfs.py)
 
 - Explores as far as possible along a branch before backtracking.
 - Can be implemented recursively or iteratively using a stack.
