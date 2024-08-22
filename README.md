@@ -70,6 +70,12 @@
 
 **Trie**
 
+- A trie is a type of tree data structure that is used to store a dynamic set or associative array where the keys are usually strings. It is also known as a "prefix tree" because it is used to efficiently store and retrieve keys that share common prefixes.
+- Nodes: Each node in a trie represents a single character of a key. The root node is usually empty and does not contain any character.
+- Edges: An edge connects two nodes and represents the transition from one character to the next in a key.
+- Paths: A path from the root to a node spells out a prefix of some key.
+- End of Word Marker: Nodes can have a flag (or marker) to indicate the end of a valid word or key.
+
 **Inorder Traversal**
 
 - A type of tree traversal.
