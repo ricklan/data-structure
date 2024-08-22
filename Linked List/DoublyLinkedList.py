@@ -1,12 +1,13 @@
 from Node import Node
 
+
 class DLL:
     def __init__(self):
         self.head = None
-    
+
     def insert(self, data):
         node = Node(val=data)
-        if(self.head is None):
+        if self.head is None:
             self.head = node
             self.head.next = None
             self.head.prev = None
@@ -16,21 +17,21 @@ class DLL:
                 cur = cur.next
             cur.next = node
             node.prev = cur
-    
+
     def printLinkedList(self):
         string = "None"
         cur = self.head
-        while(cur is not None):
+        while cur is not None:
             string += f" <-- {cur.data} --> "
             cur = cur.next
         string += "None"
         print(string)
-    
+
     def reverseLinkedList(self):
         prev = None
         cur = self.head
 
-        while(cur is not None):
+        while cur is not None:
             temp = cur.next
             cur.next = cur.prev
             cur.prev = temp
@@ -39,7 +40,7 @@ class DLL:
         self.head = prev
 
 
-if(__name__ == '__main__'):
+if __name__ == "__main__":
     dll = DLL()
     dll.insert(1)
     dll.insert(2)

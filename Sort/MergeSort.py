@@ -1,41 +1,43 @@
-def mergeSort(array):
-    n = len(array)
+def MergeSort(nums):
+    n = len(nums)
 
-    if(n <= 1):
-        return array
-    
-    i = n // 2
-    l1 = array[:i]
-    l2 = array[i:]
-    
-    l1 = mergeSort(l1)
-    l2 = mergeSort(l2)
+    if n <= 1:
+        return nums
 
-    return merge(l1, l2)
+    mid = n // 2
+    left = MergeSort(nums[:mid])
+    right = MergeSort(nums[mid:])
 
-def merge(l1, l2):
-    new_array = []
-    while(len(l1) > 0 and len(l2) > 0):
-        if(l1[0] < l2[0]):
-            new_array.append(l1[0])
-            l1.pop(0)
-        elif(l1[0] > l2[0]):
-            new_array.append(l2[0])
-            l2.pop(0)
+    return Merge(left, right)
+
+
+def Merge(left_subarray, right_subarray):
+    sorted_array = []
+    left_pointer = 0
+    right_pointer = 0
+
+    while left_pointer < len(left_subarray) and right_pointer < len(right_subarray):
+        left_num = left_subarray[left_pointer]
+        right_num = right_subarray[right_pointer]
+
+        if left_num < right_num:
+            sorted_array.append(left_num)
+            left_pointer += 1
+        elif right_num < left_num:
+            sorted_array.append(right_num)
+            right_pointer += 1
         else:
-            new_array.append(l1[0])
-            new_array.append(l2[0])
-            l1.pop(0)
-            l2.pop(0)
-    
-    if(len(l1) > 0):
-        new_array += l1
-    
-    if(len(l2) > 0):
-        new_array += l2
-        
-    return new_array
+            sorted_array.append(left_num)
+            sorted_array.append(right_num)
+            left_pointer += 1
+            right_pointer += 1
 
-if(__name__ == "__main__"):
-    array = [5, 2, 1, 6, 4]
-    print(mergeSort(array))
+    sorted_array += left_subarray[left_pointer:]
+    sorted_array += right_subarray[right_pointer:]
+
+    return sorted_array
+
+
+if __name__ == "__main__":
+    nums = [5, 2, 1, 6, 4]
+    print(MergeSort(nums))

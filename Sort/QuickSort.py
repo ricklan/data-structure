@@ -1,23 +1,24 @@
-def quickSort(array):
+def QuickSort(nums):
+    n = len(nums)
 
     # Base Case
-    if(len(array) <= 1):
-        return array
-    
-    # Pivoting
-    pivot = array[-1]
-    less_than = []
-    greater_than = []
-    for i in range(len(array) - 1):
-        item = array[i]
-        if(item <= pivot):
-            less_than.append(item)
-        else:
-            greater_than.append(item)
+    if n <= 1:
+        return nums
 
-    # Combining it together
-    return quickSort(less_than) + [pivot] + quickSort(greater_than)
+    # Choosing the first element as the pivot
+    pivot = nums[0]
 
-if(__name__ == "__main__"):
-    array = [5, 2, 1, 6, 4]
-    print(quickSort(array))
+    # Partition the array into three parts:
+    # 1. less: elements less than the pivot
+    # 2. equal: elements equal to the pivot
+    # 3. greater: elements greater than the pivot
+    less = [x for x in nums if x < pivot]
+    equal = [x for x in nums if x == pivot]
+    greater = [x for x in nums if x > pivot]
+
+    return QuickSort(less) + equal + QuickSort(greater)
+
+
+if __name__ == "__main__":
+    nums = [5, 2, 1, 6, 4]
+    print(QuickSort(nums))

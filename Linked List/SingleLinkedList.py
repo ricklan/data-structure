@@ -1,9 +1,9 @@
 from Node import Node
 
+
 class SLL:
     def __init__(self):
         self.head = None
-    
 
     def insert(self, data):
         new_node = Node(val=data)
@@ -14,20 +14,20 @@ class SLL:
             while cur.next:
                 cur = cur.next
             cur.next = new_node
-    
+
     def printLinkedList(self):
         cur = self.head
         string = ""
-        while(cur is not None):
+        while cur is not None:
             string += f"{cur.data} --> "
             cur = cur.next
         string += str(None)
         print(string)
-    
+
     def reverseLinkList(self):
         prev = None
         cur = self.head
-        while(cur is not None):
+        while cur is not None:
             temp = cur.next
             cur.next = prev
             prev = cur
@@ -35,7 +35,7 @@ class SLL:
         self.head = prev
 
 
-if(__name__ == '__main__'):
+if __name__ == "__main__":
     sll = SLL()
     sll.insert(1)
     sll.insert(2)
