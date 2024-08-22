@@ -98,7 +98,7 @@
 
 ## Heap / Priority Queue
 
-## [Recursion] (https://github.com/ricklan/data-structure/tree/main/Recursion)
+## [Recursion](https://github.com/ricklan/data-structure/tree/main/Recursion)
 
 - The base case is the condition under which the recursion stops. Without a base case, the function would continue to call itself indefinitely, leading to a stack overflow error. The base case is typically a simple, non-recursive solution to the problem.
 
