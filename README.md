@@ -49,7 +49,7 @@
 
 ## Graph
 
-## Tree
+## [Tree](https://github.com/ricklan/data-structure/tree/main/Trees)
 
 - Every tree is a graph.
 - Trees are graphs where there are no cycles.
@@ -76,23 +76,23 @@
 - Paths: A path from the root to a node spells out a prefix of some key.
 - End of Word Marker: Nodes can have a flag (or marker) to indicate the end of a valid word or key.
 
-**Inorder Traversal**
+[**Inorder Traversal**](https://github.com/ricklan/data-structure/blob/main/Trees/inorder_traversal.py)
 
 - A type of tree traversal.
 - Left, Root, Right
 - In a BST, inorder traversal will get you the nodes in increasing order
 
-**Preorder Traversal**
+[**Preorder Traversal**](https://github.com/ricklan/data-structure/blob/main/Trees/preorder_traversal.py)
 
 - A type of tree traversal.
 - Root, Left, Right
 
-**Postorder Traversal**
+[**Postorder Traversal**](https://github.com/ricklan/data-structure/blob/main/Trees/postorder_traversal.py)
 
 - A type of tree traversal.
 - Left, Right, Root
 
-**Level Order Traversal/Breadth First Search**
+[**Level Order Traversal/Breadth First Search**](https://github.com/ricklan/data-structure/blob/main/Trees/level_order_traversal.py)
 
 - You traverse the tree level by level, left to right. (Same logic as BFS)
 
