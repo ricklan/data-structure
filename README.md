@@ -1,12 +1,23 @@
 # Data Structure And Algorithms
 
+## Hashset and Hashmap
+
+- A `hashset` is a data structure that stores unique elements.
+- Adding, checking and removal operations have an average of `O(1)` or `constant` time complexity for hashsets.
+- A `hashmap` is a data structure that stores key-value pairs.
+- Adding, checking and removal operations have an average of `O(1)` or `constant` time complexity for hashmaps.
+
 ## Arrays and Strings
 
 **2 Pointers**
 
-**Fast and Slow Pointers**
+- This technique involves using two pointers to iterate through a data structure, typically an array, from different positions (E.g. one from the start and one from the end). The two pointers approach is useful for problems involving searching.
+- Can reduce `O(n^2)` time to `O(n)` time
 
 **Sliding Window**
+
+- This technique is particularly useful for problems involving subarrays or substrings.
+- Involves 2 pointers.
 
 ## [Linked List](https://github.com/ricklan/data-structure/tree/main/Linked%20List)
 
@@ -30,6 +41,11 @@
 
 - Each node has a pointer to the next node.
 - The tail points to `head`.
+
+**Fast and Slow Pointers**
+
+- 2 pointers move at different speeds.
+- Useful for detecting cycles.
 
 ## [Queue](https://github.com/ricklan/data-structure/blob/main/Stack%20%26%20Queue/Queue.py)
 
@@ -60,6 +76,10 @@
 - A `path` is a sequence of vertices connected by edges.
 - A `simple path` has no repeated vertices.
 - A `cycle` is a path that starts and ends at the same vertex.
+- Depending on the question, the graph may be in the shape of a matrix or 2-D array
+- May need to have an array of directions (E.g. `[(-1,0), (1,0), (0,1), (0,-1)]` representing `[left, right, up, down]`).
+- `num_rows = len(graph)`
+- `num_columns = len(graph[0])`
 
 [**Breadth First Search (BFS)**](https://github.com/ricklan/data-structure/blob/main/Graph/bfs.py)
 
@@ -120,8 +140,6 @@
 
 - You traverse the tree level by level, left to right. (Same logic as BFS)
 
-## Heap / Priority Queue
-
 ## [Recursion](https://github.com/ricklan/data-structure/tree/main/Recursion)
 
 - The base case is the condition under which the recursion stops. Without a base case, the function would continue to call itself indefinitely, leading to a stack overflow error. The base case is typically a simple, non-recursive solution to the problem.
@@ -135,15 +153,37 @@
 
 ## Dynamic Programming
 
-## Sorting Algorithms
+## [Sorting Algorithms](https://github.com/ricklan/data-structure/tree/main/Sort)
+
+[**Bubble Sort**]()
+
+- Repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. This process is repeated until the list is sorted.
+- Time Complexity: O(n²)
+
+[**Selection Sort**]()
+
+- Divides the list into a sorted and an unsorted part. Repeatedly selects the smallest (or largest) element from the unsorted part and moves it to the end of the sorted part.
+- Time Complexity: O(n²)
+
+[**Insertion Sort**]()
+
+- Builds the sorted list one item at a time by repeatedly taking the next element from the unsorted part and inserting it into the correct position in the sorted part.
+- Time Complexity: O(n²)
+
+[**Merge Sort**]()
+
+- A divide-and-conquer algorithm that splits the list into halves, recursively sorts each half, and then merges the sorted halves back together.
+- Time Complexity: O(n log n)
+
+[**Quick Sort**]()
+
+- Uses the divide-and-conquer strategy to sort an array. It selects a "pivot" element and partitions the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. The sub-arrays are then sorted recursively.
+- Time Complexity: O(n log n)
+
+## Heap / Priority Queue
 
 ## Greedy Algorithm
 
 ## Matrix
-
-- Depending on the question, a matrix might be a graph.
-- May need to have an array of directions (E.g. `[(-1,0), (1,0), (0,1), (0,-1)]` representing `[left, right, up, down]`).
-- `num_rows = len(graph)`
-- `num_columns = len(graph[0])`
 
 ## Intervals

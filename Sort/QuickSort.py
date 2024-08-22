@@ -21,5 +21,3 @@ def quickSort(array):
 if(__name__ == "__main__"):
     array = [5, 2, 1, 6, 4]
     print(quickSort(array))
-    array2 = [5, 2, 1, 6, 4, 1, 1, 1, 1, 0]
-    print(quickSort(array2))

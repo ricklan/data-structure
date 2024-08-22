@@ -39,5 +39,3 @@ def merge(l1, l2):
 if(__name__ == "__main__"):
     array = [5, 2, 1, 6, 4]
     print(mergeSort(array))
-    array2 = [5, 2, 1, 6, 4, 1, 1, 1, 1, 0]
-    print(mergeSort(array2))
