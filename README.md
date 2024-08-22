@@ -51,24 +51,58 @@
 
 ## Tree
 
+- Every tree is a graph.
+- Trees are graphs where there are no cycles.
+- The root is the first node of the tree.
+- The node which is a predecessor of any node is the parent node.
+- The node which is descendant of any node is the child node.
+- A leaf is a node that doesn't have any children.
+- Edges connect 2 nodes to each other.
+- A path is the sequence of nodes and edges from 1 node to another.
+
 **Binary Tree**
 
+- Each node has at most 2 children.
+
 **Binary Search Tree**
+
+- A special type of binary tree where the left child is smaller than the parent and the right child is bigger than the parent.
 
 **Trie**
 
 **Inorder Traversal**
 
+- A type of tree traversal.
+- Left, Root, Right
+- In a BST, inorder traversal will get you the nodes in increasing order
+
 **Preorder Traversal**
+
+- A type of tree traversal.
+- Root, Left, Right
 
 **Postorder Traversal**
 
-**Level Order Traversal**
+- A type of tree traversal.
+- Left, Right, Root
+
+**Level Order Traversal/Breadth First Search**
+
+- You traverse the tree level by level, left to right. (Same logic as BFS)
 
 ## Heap / Priority Queue
 
-## Recursion
+## [Recursion] (https://github.com/ricklan/data-structure/tree/main/Recursion)
+
+- The base case is the condition under which the recursion stops. Without a base case, the function would continue to call itself indefinitely, leading to a stack overflow error. The base case is typically a simple, non-recursive solution to the problem.
+
+- The recursive case is where the function calls itself with a modified argument, moving towards the base case. The recursive case should always work towards simplifying the problem.
+
+- E.g. In a recursive function for finding the factorial of a number, n, the base case would be when n is 0. The recursive case is `n * factorial(n-1)`.
+  [See example](https://github.com/ricklan/data-structure/blob/main/Recursion/factorial.py)
 
 ## Backtracking
 
 ## Dynamic Programming
+
+## Sorting Algorithms
