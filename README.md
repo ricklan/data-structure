@@ -12,7 +12,7 @@
 **2 Pointers**
 
 - This technique involves using two pointers to iterate through a data structure, typically an array, from different positions (E.g. one from the start and one from the end). The two pointers approach is useful for problems involving searching.
-- Can reduce `O(n^2)` time to `O(n)` time
+- Can reduce `O(n²)` time to `O(n)` time
 
 **Sliding Window**
 
@@ -155,30 +155,30 @@
 
 ## [Sorting Algorithms](https://github.com/ricklan/data-structure/tree/main/Sort)
 
-[**Bubble Sort**]()
+[**Bubble Sort**](https://github.com/ricklan/data-structure/blob/main/Sort/BubbleSort.py)
 
 - Repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. This process is repeated until the list is sorted.
-- Time Complexity: O(n²)
+- Time Complexity: `O(n²)`
 
-[**Selection Sort**]()
+[**Selection Sort**](https://github.com/ricklan/data-structure/blob/main/Sort/SelectionSort.py)
 
 - Divides the list into a sorted and an unsorted part. Repeatedly selects the smallest (or largest) element from the unsorted part and moves it to the end of the sorted part.
-- Time Complexity: O(n²)
+- Time Complexity: `O(n²)`
 
-[**Insertion Sort**]()
+[**Insertion Sort**](https://github.com/ricklan/data-structure/blob/main/Sort/InsertionSort.py)
 
 - Builds the sorted list one item at a time by repeatedly taking the next element from the unsorted part and inserting it into the correct position in the sorted part.
-- Time Complexity: O(n²)
+- Time Complexity: `O(n²)`
 
-[**Merge Sort**]()
+[**Merge Sort**](https://github.com/ricklan/data-structure/blob/main/Sort/MergeSort.py)
 
 - A divide-and-conquer algorithm that splits the list into halves, recursively sorts each half, and then merges the sorted halves back together.
-- Time Complexity: O(n log n)
+- Time Complexity: `O(n log n)`
 
-[**Quick Sort**]()
+[**Quick Sort**](https://github.com/ricklan/data-structure/blob/main/Sort/QuickSort.py)
 
 - Uses the divide-and-conquer strategy to sort an array. It selects a "pivot" element and partitions the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. The sub-arrays are then sorted recursively.
-- Time Complexity: O(n log n)
+- Time Complexity: `O(n log n)`
 
 ## Heap / Priority Queue
 
