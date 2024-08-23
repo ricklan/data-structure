@@ -24,20 +24,20 @@
 - The **head** of the linked list is the first node.
 - The **tail** of the linked list is the last node.
 
-**Single Linked List (SLL)**
+[**Single Linked List (SLL)**](https://github.com/ricklan/data-structure/blob/main/Linked%20List/SingleLinkedList.py)
 
 - Each node has a pointer to the next node.
 - The tail points to `None`.
 - E.g. [Head] --> [Node 2] --> ... --> [Tail] -->
 
-**Doubly Linked List (DLL)**
+[**Doubly Linked List (DLL)**](https://github.com/ricklan/data-structure/blob/main/Linked%20List/DoublyLinkedList.py)
 
 - Each node has a pointer to the next node and to the previous node.
 - The head's previous pointer points to `None`.
 - The tail's next pointer points to `None`.
 - E.g. <-- [Head] <--> [Node 2] <--> ... <--> [Tail] -->
 
-**Circular Linked List (CLL)**
+[**Circular Linked List (CLL)**](https://github.com/ricklan/data-structure/blob/main/Linked%20List/CircularLinkedList.py)
 
 - Each node has a pointer to the next node.
 - The tail points to `head`.
