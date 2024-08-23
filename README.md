@@ -149,9 +149,37 @@
 - E.g. In a recursive function for finding the factorial of a number, n, the base case would be when n is 0. The recursive case is `n * factorial(n-1)`.
   [See example](https://github.com/ricklan/data-structure/blob/main/Recursion/factorial.py)
 
-## Backtracking
+## [Backtracking](https://github.com/ricklan/data-structure/tree/main/Backtracking)
+- An algorithm used to find solutions to problems by incrementally building candidates for solutions and abandoning those candidates as soon as it is determined that they cannot be extended to a valid solution. It is commonly used for problems like permutations, combinations, and puzzles.
+- Key Concepts of Backtracking
+  1. Choice: Choose an option from the set of possible options.
+  2. Constraint: Ensure that the choice is valid according to the problem’s constraints.
+  3. oal Check: Check if the current solution is complete and valid.
+  4. Backtrack: If the current choice does not lead to a solution, undo the choice and try the next option.
+- Psuedo Code
+```
+def backtrack(candidate):
+if find_solution(candidate):
+    output(candidate)
+    return
 
-## Dynamic Programming
+# iterate all possible candidates.
+for next_candidate in list_of_candidates:
+    if is_valid(next_candidate):
+        # try this partial candidate solution
+        place(next_candidate)
+        # given the candidate, explore further.
+        backtrack(next_candidate)
+        # backtrack
+        remove(next_candidate)
+```
+
+## [Dynamic Programming](https://github.com/ricklan/data-structure/tree/main/Dynamic%20Proraming)
+- A method used in computer science and optimization to solve problems by breaking them down into simpler subproblems. It’s particularly useful for problems where the same subproblems are solved multiple times.
+
+- `Top-Down (Memoization):` This approach involves solving the problem by starting with the main problem and breaking it down into smaller subproblems, storing the results of these subproblems to avoid recomputation.
+
+- `Bottom-Up (Tabulation):` This approach starts with the smallest subproblems and builds up the solution to the main problem by combining the solutions of these subproblems.
 
 ## [Sorting Algorithms](https://github.com/ricklan/data-structure/tree/main/Sort)
 
