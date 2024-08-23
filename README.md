@@ -174,7 +174,7 @@ for next_candidate in list_of_candidates:
         remove(next_candidate)
 ```
 
-## [Dynamic Programming](https://github.com/ricklan/data-structure/tree/main/Dynamic%20Proraming)
+## [Dynamic Programming](https://github.com/ricklan/data-structure/tree/main/Dynamic%20Programming)
 - A method used in computer science and optimization to solve problems by breaking them down into simpler subproblems. It’s particularly useful for problems where the same subproblems are solved multiple times.
 
 - `Top-Down (Memoization):` This approach involves solving the problem by starting with the main problem and breaking it down into smaller subproblems, storing the results of these subproblems to avoid recomputation.
