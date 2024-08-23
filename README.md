@@ -42,7 +42,7 @@
 - Each node has a pointer to the next node.
 - The tail points to `head`.
 
-**Fast and Slow Pointers**
+[**Fast and Slow Pointers**](https://github.com/ricklan/data-structure/blob/main/Linked%20List/CycleDetection.py)
 
 - 2 pointers move at different speeds.
 - Useful for detecting cycles.
