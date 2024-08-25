@@ -208,7 +208,9 @@ for next_candidate in list_of_candidates:
 - Uses the divide-and-conquer strategy to sort an array. It selects a "pivot" element and partitions the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. The sub-arrays are then sorted recursively.
 - Time Complexity: `O(n log n)`
 
-## Heap / Priority Queue
+## Heap
+- If you want to find the **top** or **biggest** k elements, use a **min** heap.
+- If you want to find the **bottom** or **smallest** k elements, use a **max** heap.
 
 ## Greedy Algorithm
 
