@@ -107,7 +107,7 @@
 7. Repeat steps 4-7  until all nodes have been visited or until the shortest path to the target node is found.
 ```
 
-[**Prims Algorithm**](https://github.com/ricklan/data-structure/blob/main/Graph/prim.py)
+[**Prim's Algorithm**](https://github.com/ricklan/data-structure/blob/main/Graph/prim.py)
 - Finds the Minimum Spanning Tree (MST) for a connected, undirected graph.
 - A **Minimum Spanning Tree (MST)** is a subset of the edges in a graph that connects all the vertices together without any cycles, and with the minimum possible total edge weight.
 - Algorithm
