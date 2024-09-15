@@ -93,6 +93,34 @@
 - Can be implemented recursively or iteratively using a stack.
 - Useful for pathfinding and detecting cycles.
 
+[**Dijkstra’s Algorithm**](https://github.com/ricklan/data-structure/blob/main/Graph/dijkstra.py)
+- Finds the shortest path between 2 vertices in a graph with non-negative weighted edges. The weight represents the distance or cost between 2 nodes.
+- It's a greedy algorithm, as it always chooses the closest node that hasn't been processed yet.
+- Algorithm
+```
+1. Start with a node. This is the source node.
+2. Set the distance to all other nodes as infinity (or a large number). The distance to the source node is 0.
+3. Mark all nodes as unvisited.
+4. Select the unvisited node with the smallest known distance from the source node. Initially, this is the source node itself.
+5. For this node, calculate the distance to its neighboring nodes. Update the shortest distance to each neighbor if a shorter path is found.
+6. Once all neighbors have been considered, mark this node as visited. A visited node will not be checked again.
+7. Repeat steps 4-7  until all nodes have been visited or until the shortest path to the target node is found.
+```
+
+[**Prims Algorithm**](https://github.com/ricklan/data-structure/blob/main/Graph/prim.py)
+- Finds the Minimum Spanning Tree (MST) for a connected, undirected graph.
+- A **Minimum Spanning Tree (MST)** is a subset of the edges in a graph that connects all the vertices together without any cycles, and with the minimum possible total edge weight.
+- Algorithm
+```
+1. Start with a node. This is the source node.
+2. Mark the source node as part of the MST.
+3. Initialize a min-heap to store the edges, sorted by their weight.
+4. Select the edge with the minimum weight from the min-heap.
+5. If the edge connects to a node not yet included in the MST, add it to the MST.
+6. Mark this new node as visited, and add all edges connected to this new node to the min-heap (only those that connect to nodes not already in the MST).
+7. Repeat steps 4-6 until all nodes are included in the MST.
+```
+
 ## [Tree](https://github.com/ricklan/data-structure/tree/main/Trees)
 
 - Every tree is a graph.
@@ -209,8 +237,11 @@ for next_candidate in list_of_candidates:
 - Time Complexity: `O(n log n)`
 
 ## Heap
-- If you want to find the **top** or **biggest** k elements, use a **min** heap.
-- If you want to find the **bottom** or **smallest** k elements, use a **max** heap.
+- A **heap** is a binary tree-based data structure that follows the heap property. In a heap, the value of each node is compared to the values of its children in a specific way.
+- In a **max heap** the root node contains the maximum value, and the values decrease as you move down the tree.
+- In a **min heap** the root node contains the minimum value, and the values increase as you move down the tree.
+- If you want to find the **top** or **biggest** k elements, use a **min heap**.
+- If you want to find the **bottom** or **smallest** k elements, use a **max heap**.
 
 ## Greedy Algorithm
 
