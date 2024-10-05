@@ -121,6 +121,22 @@
 7. Repeat steps 4-6 until all nodes are included in the MST.
 ```
 
+[**Topological Sort**](https://github.com/ricklan/data-structure/blob/main/Graph/topological_sort.py)
+- Is an ordering of nodes in a directed acyclic graph (DAG) where for each directed edge (A, B), node A appears before node B in the ordering.
+- Topological orderings are not unqiue.
+- E.g. If we have `A->B, A->C, B->D`, then one valid topological ordering is A,B,C,D.
+- Can be done via DFS or Kahn's Algorithm
+- Kahn's Algorithm
+```
+1. Add all nodes with in-degree 0 to a queue.
+2. While the queue is not empty:
+    a. Remove a node from the queue and add it to a list.
+    b. For each outgoing edge from the removed node, decrement the in-degree of the destination node by 1.
+    c. If the in-degree of a destination node becomes 0, add it to the queue.
+3. If the queue is empty and there are still nodes in the graph, the graph contains a cycle and cannot be topologically sorted.
+4. The nodes in the list represent the topological ordering of the graph.
+```
+
 ## [Tree](https://github.com/ricklan/data-structure/tree/main/Trees)
 
 - Every tree is a graph.
